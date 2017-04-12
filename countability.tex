@@ -56,9 +56,37 @@
 
 	To characterize $[\mathbb{N}]$, we need to recall the notion of a sequence:
 
+	\label{lecture47}
 	\begin{description}
 		\item[Definition:] A \underline{sequence} is a set of elements $\{x_1, x_2, \dots\}$ indexed by $J$, i.e. $\exists f: \rightarrow \{x_1, x_2, \dots\}$ s.t. $f(n) = x_n \forall n \in J$.
+			Recall that sequences and their limits are used to define various notions in calculus (differentiation, integration, etc.).
+			Also, calculators use sequences in order to compute with various rational and irrational numbers.
+		\item[Examples:]
+			\begin{enumerate}
+				\item $\pi \approx 3.1415\dots$ i.e. instead of $\pi$ we can work with the following sequence of rational numbers: $x_1 = 3, x_2 = 3.1, x_2 = 3.14, x_3 = 3.141, x_4 = 3.1415, \dots$
+					$$\lim_{n \to \infty} x_n = \pi$$
+					$\pi$ is irrational. $\pi \in \mathbb{R}\setminus\mathbb{Q}$
+				\item $\frac{1}{3} \approx 0.333 \dots$ means we can set up the sequence of rational numbers $x_1 = 0, x_2 = 0.3, x_3 = 0.33, x_4 = 0.333, x_5 = 0.3333$ etc. such that $\lim_{n \to \infty} x_n = \frac{1}{3}$.
+					Note that $fraq{1}{3}\in\mathbb{Q}$.
+			\end{enumerate}
 	\end{description}
 
-	Recall that sequences and their limits are used to define various notions in calculus (differentiation, integration, etc.).
-	Also, calculators use sequences in order to compute with various rational and irrational numbers.
+	\subsection*{Restatement of the definition of countably infinite}
+	A set $A$ is countably infinite if its elements can be arranged in a sequence $\{x_1, x_2, \dots\}$ such that $A = \{x_1, x_2, \dots\}$. This is another way of saying $A$ is in bijective correspondence with $J$, i.e. $\exists f: A \to J$ a bijection, nameily $A \sim J$.
+
+	\subsection*{Application of this statement}	$\mathbb{Z}\sim\mathbb{N}$
+	Indeed, we can write $\mathbb{Z}$ as a sequence since $\mathbb{Z} =\{0,1,-1,2,-2,\dots\}$ so $\mathbb{Z}\in[\mathbb[N]$, $\mathbb{Z}$ is countably infinite like $\mathbb{N}$.
+
+	\subsection*{Big difference between finite and infinite sets}
+	Let $A, B$ be finite sets such that $A\subsetneqq B$, i.e. $A \subseteq B$, but $A \neq B$.
+	Then $A \nsim B$ since $\#(A) < \#(B)$ and $J_n \nsim J_m$ if $n \neq m$.
+	Let $A, B$ be infinite sets such that $A\subsetneqq B, A \subseteq B$, but $A \neq B$.
+	It is possible that $A \sim B$. We saw this behaviour in Hilbert's hotel problem (Hilbert's Paradox of the Grand Hotel, subsection \ref{hilbert}):
+	$\mathbb{N}^\ast\subsetneqq\mathbb{N}$ but $\mathbb{N}\sim\mathbb{N}^\ast$ via the bijection $f:\mathbb{N}\to\mathbb{N}^\ast$ given by $f(n)=n+1$ so $\{0,1,2,\dots\}\sim\{1,2,\dots\}$
+	In the same vein, we get the following result:
+	
+	\begin{description}
+		\item[Thereom:] Every infinite subset of a countably infinite set is itself countably infinite.
+		\item[Proof:] Let $E \subseteq A$ be the subset in question, where $E$ is infinite, and $A$ is countably infinite. $A$ is countably infinite $\rightleftarrow A\sim J \rightleftarrow A = \{x_1,x_2,\dots\}$
+
+	\end{description}
